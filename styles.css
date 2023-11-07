@@ -63,6 +63,15 @@ h1 {
     padding: 20px;
     width: 80%;
     height: 80%;
+
+}
+#modal-message {
+    /* font-family: YuGothic,'Yu Gothic',YuGothic,'Yu Gothic',sans-serif;
+    width: 100%;
+    height: auto; */
+    font-size: 100px; /* 任意のフォントサイズを指定 */
+    font-weight: bold; /* ボールド（太字）のテキストにする場合 */
+    text-align: center; /* テキストを中央揃えにする場合 */
 }
 /* モバイルフォン用のスタイル（幅が最大 767px） */
 @media (max-width: 767px) {
