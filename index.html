@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>HTMLテスト</title>
-    </head>
-    <body>
-        <h1>フォームのテスト</h1>
-
-        <form id="testForm">
-            <label for="name">名前:</label>
-            <input type="text" id="name" name="name" value="John Doe">
-
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email" value="johndoe@example.com">
-
-            <input type="submit" value="送信">
-        </form>
-
-        <script>
-            const form = document.getElementById("testForm");
-
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                const nameInput = form.elements.name;
-                const emailInput = form.elements.email;
-
-                if (nameInput.value === "John Doe" && emailInput.value === "johndoe@example.com") {
-                    alert("テスト合格");
-                } else {
-                    alert("テスト失敗");
-                }
-            });
-        </script>
-    </body>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>かるたゲーム</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>かるたゲーム</h1>
+        <p>score</p>
+        <p id="score"></p>
+        <p id="question"></p>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <p id="modal-message">正解</p>
+            </div>
+        </div> 
+        <div class="modal" id="second-modal">
+            <div class="modal-content">
+                <p id="second-modal-message">最終画面</p>
+            </div>
+        </div> 
+        <!-- <button id="open-button">正解を表示</button> -->
+        <p id="message"></p>
+        <div id="cards" class="grid-container"></div>
+        <p></p>
+        <button onclick="location.reload();">ページを再読み込み</button>
+    </div>
+    <audio id="myAudio">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
 </html>
