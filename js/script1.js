@@ -1,13 +1,13 @@
 let cards = [
-    { id: 1, imagePath: "cardimages/A1.png", altText: "A1"},
-    { id: 2, imagePath: "cardimages/A2.png", altText: "A2"},
-    { id: 3, imagePath: "cardimages/A3.png", altText: "A3"},
-    { id: 4, imagePath: "cardimages/A4.png", altText: "A4"},
-    { id: 5, imagePath: "cardimages/A5.png", altText: "A5"},
-    { id: 6, imagePath: "cardimages/A6.png", altText: "A6"},
-    { id: 7, imagePath: "cardimages/A7.png", altText: "A7"},
-    { id: 8, imagePath: "cardimages/A8.png", altText: "A8"},
-    { id: 9, imagePath: "cardimages/A9.png", altText: "A9"},
+    { id: 1, imagePath: "images/cardimages/A1.png", altText: "A1"},
+    { id: 2, imagePath: "images/cardimages/A2.png", altText: "A2"},
+    { id: 3, imagePath: "images/cardimages/A3.png", altText: "A3"},
+    { id: 4, imagePath: "images/cardimages/A4.png", altText: "A4"},
+    { id: 5, imagePath: "images/cardimages/A5.png", altText: "A5"},
+    { id: 6, imagePath: "images/cardimages/A6.png", altText: "A6"},
+    { id: 7, imagePath: "images/cardimages/A7.png", altText: "A7"},
+    { id: 8, imagePath: "images/cardimages/A8.png", altText: "A8"},
+    { id: 9, imagePath: "images/cardimages/A9.png", altText: "A9"},
 ];
 
 const questions = [
@@ -49,7 +49,7 @@ let questionPattern = "red";
 function changeCardsImagePath(cardPattern){
     for(let i =  0; i < cards.length; i++){
         const imageNum = (i+1).toString();
-        const imagePath = "cardimages/" + cardPattern + imageNum + extension;
+        const imagePath = "images/cardimages/" + cardPattern + imageNum + extension;
         cards[i].imagePath = imagePath;
         cards[i].altText = cardPattern + imageNum;
     }
