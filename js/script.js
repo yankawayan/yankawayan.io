@@ -1,7 +1,7 @@
 var downloadButton = document.getElementById('downloadButton');
   downloadButton.addEventListener('click', function() {
     // ZIPファイルのURLを指定
-    var zipFileURL = 'files\bunsu_karuta.zip';
+    var zipFileURL = "https://github.com/yankawayan/yankawayan.io/blob/master/files/bunsu_karuta.zip";
     // ダウンロード用のリンクを作成
     var downloadLink = document.createElement('a');
     // リンクの属性を設定
