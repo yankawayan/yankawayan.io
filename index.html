@@ -6,23 +6,28 @@
   <title>GitHubファイルダウンロード</title>
 </head>
 <body>
+  <header>
+    <div>
+      <p>this area is header</p>
+    </div>
+  </header>
+  <button onclick="downloadFile()">ファイルをダウンロード</button>
+  <footer>
+    <p>this is header</p>
+  </footer>
+  <script>
+  function downloadFile() {
+    // GitHubのRaw URLを指定
+    const githubRawUrl = 'https://raw.githubusercontent.com/yankawayan/yankawayan.io/master/files/bunsu_karuta.zip';
 
-<button onclick="downloadFile()">ファイルをダウンロード</button>
+    // ダウンロード用のリンクを作成
+    const link = document.createElement('a');
+    link.href = githubRawUrl;
+    link.download = 'ダウンロードされるファイル名'; // ファイル名を指定
 
-<script>
-function downloadFile() {
-  // GitHubのRaw URLを指定
-  const githubRawUrl = 'https://raw.githubusercontent.com/yankawayan/yankawayan.io/master/files/bunsu_karuta.zip';
-
-  // ダウンロード用のリンクを作成
-  const link = document.createElement('a');
-  link.href = githubRawUrl;
-  link.download = 'ダウンロードされるファイル名'; // ファイル名を指定
-
-  // リンクをクリックしてダウンロードを開始
-  link.click();
-}
-</script>
-
+    // リンクをクリックしてダウンロードを開始
+    link.click();
+  }
+  </script>
 </body>
 </html>
